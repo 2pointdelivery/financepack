@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace FinancePack\Models\Accounting;
 
-use FinancePack\Collections\JournalEntryCollection;
-use FinancePack\Enums\JournalEntryType;
-use FinancePack\Traits\Blamable;
-use FinancePack\Traits\CompanyOwned;
+use FinancePack\Collections\Accounting\JournalEntryCollection;
+use FinancePack\Enums\Accounting\JournalEntryType;
+use FinancePack\Concerns\Blamable;
+use FinancePack\Concerns\CompanyOwned;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Collection;
 

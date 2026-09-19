@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace FinancePack\Models\Accounting;
 
-use FinancePack\Enums\TransactionType;
-use FinancePack\Enums\PaymentMethod;
+use FinancePack\Enums\Accounting\TransactionType;
+use FinancePack\Enums\Accounting\PaymentMethod;
 use FinancePack\Models\Contact;
-use FinancePack\Traits\Blamable;
-use FinancePack\Traits\CompanyOwned;
+use FinancePack\Concerns\Blamable;
+use FinancePack\Concerns\CompanyOwned;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;

@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace FinancePack\Models\Accounting;
 
-use FinancePack\Enums\AccountCategory;
-use FinancePack\Enums\AccountType;
+use FinancePack\Enums\Accounting\AccountCategory;
+use FinancePack\Enums\Accounting\AccountType;
 use FinancePack\Models\Company;
-use FinancePack\Traits\CompanyOwned;
+use FinancePack\Concerns\CompanyOwned;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 

@@ -2,10 +2,10 @@
 
 namespace FinancePack\Models\Common;
 
-use FinancePack\Enums\OfferingType;
+use FinancePack\Enums\Accounting\OfferingType;
 use FinancePack\Models\Accounting\Account;
 use FinancePack\Models\Company;
-use FinancePack\Traits\CompanyOwned;
+use FinancePack\Concerns\CompanyOwned;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;

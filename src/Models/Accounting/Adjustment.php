@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace FinancePack\Models\Accounting;
 
-use FinancePack\Enums\AdjustmentCategory;
-use FinancePack\Enums\AdjustmentType;
-use FinancePack\Enums\AdjustmentComputation;
-use FinancePack\Traits\CompanyOwned;
+use FinancePack\Enums\Accounting\AdjustmentCategory;
+use FinancePack\Enums\Accounting\AdjustmentType;
+use FinancePack\Enums\Accounting\AdjustmentComputation;
+use FinancePack\Concerns\CompanyOwned;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 

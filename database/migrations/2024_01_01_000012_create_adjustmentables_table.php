@@ -13,9 +13,6 @@ return new class extends Migration
             $table->foreignId('adjustment_id')->constrained('adjustments')->cascadeOnDelete();
             $table->morphs('adjustable');
             $table->timestamps();
-
-            $table->index('adjustment_id');
-            $table->index(['adjustable_type', 'adjustable_id']);
         });
     }
 

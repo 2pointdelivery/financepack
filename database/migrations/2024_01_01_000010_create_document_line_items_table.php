@@ -24,10 +24,6 @@ return new class extends Migration
             $table->decimal('total', 15, 2)->default(0);
             $table->integer('sort_order')->default(0);
             $table->timestamps();
-
-            $table->index('company_id');
-            $table->index(['documentable_type', 'documentable_id']);
-            $table->index('offering_id');
         });
     }
 

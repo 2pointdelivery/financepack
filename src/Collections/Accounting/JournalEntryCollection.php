@@ -2,7 +2,7 @@
 
 namespace FinancePack\Collections\Accounting;
 
-use FinancePack\Enums\JournalEntryType;
+use FinancePack\Enums\Accounting\JournalEntryType;
 use FinancePack\Support\Money;
 use Illuminate\Database\Eloquent\Collection;
 

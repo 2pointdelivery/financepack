@@ -13,10 +13,10 @@
         "php": "^8.2",
         "ext-bcmath": "*",
         "ext-intl": "*",
-        "akaunting/laravel-money": "^6.0.2",
-        "laravel/framework": "^11.0|^12.0",
-        "squirephp/model": "^3.4",
-        "squirephp/repository": "^3.4"
+        "akaunting/laravel-money": "^6.0.2|^7.0",
+        "laravel/framework": "^11.0|^12.0|^13.0",
+        "squirephp/model": "^3.4|^4.0",
+        "squirephp/repository": "^3.4|^4.0"
     },
     "require-dev": {
         "barryvdh/laravel-snappy": "^1.0",
