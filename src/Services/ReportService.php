@@ -632,7 +632,7 @@ class ReportService implements ReportServiceInterface
             }
         }
 
-        return new Money($totalRevenue - $totalExpenses);
+        return new Money($totalRevenue - $totalExpenses, config('financepack.default_currency', 'USD'));
     }
 
     public function formatBalances(array $balances, ?string $dtoClass = null, bool $formatZeros = true): BalanceFormattable

@@ -38,6 +38,7 @@ class Transaction extends Model
         'amount',
         'pending',
         'reviewed',
+        'approved_override',
         'posted_at',
         'meta',
     ];
@@ -49,6 +50,7 @@ class Transaction extends Model
         'amount' => 'integer',
         'pending' => 'boolean',
         'reviewed' => 'boolean',
+        'approved_override' => 'boolean',
         'posted_at' => 'date',
         'meta' => 'array',
     ];

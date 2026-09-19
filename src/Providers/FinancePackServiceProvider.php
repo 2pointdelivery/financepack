@@ -8,12 +8,16 @@ use FinancePack\Services\TransactionService;
 use FinancePack\Services\ReportService;
 use FinancePack\Services\ChartOfAccountsService;
 use FinancePack\Services\PlaidService;
+use FinancePack\Services\FinancialClosureService;
+use FinancePack\Services\BudgetService;
 use FinancePack\Contracts\Services\AccountServiceInterface;
 use FinancePack\Contracts\Services\TransactionServiceInterface;
 use FinancePack\Contracts\Services\ReportServiceInterface;
 use FinancePack\Contracts\Services\ChartOfAccountsServiceInterface;
 use FinancePack\Contracts\Services\CurrencyServiceInterface;
 use FinancePack\Contracts\Services\PlaidServiceInterface;
+use FinancePack\Contracts\Services\FinancialClosureServiceInterface;
+use FinancePack\Contracts\Services\BudgetServiceInterface;
 use Illuminate\Support\ServiceProvider;
 
 class FinancePackServiceProvider extends ServiceProvider
@@ -67,9 +71,13 @@ class FinancePackServiceProvider extends ServiceProvider
             );
         });
         $this->app->singleton(PlaidServiceInterface::class, PlaidService::class);
+        $this->app->singleton(FinancialClosureServiceInterface::class, FinancialClosureService::class);
+        $this->app->singleton(BudgetServiceInterface::class, BudgetService::class);
 
         // Facade aliases
         $this->app->alias(AccountServiceInterface::class, 'financepack.accounting');
         $this->app->alias(CurrencyServiceInterface::class, 'financepack.forex');
+        $this->app->alias(FinancialClosureServiceInterface::class, 'financepack.closure');
+        $this->app->alias(BudgetServiceInterface::class, 'financepack.budget');
     }
 }

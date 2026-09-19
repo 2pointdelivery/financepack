@@ -95,4 +95,35 @@ return [
         'webhook_url' => env('PLAID_WEBHOOK_URL'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Financial Closure Settings
+    |--------------------------------------------------------------------------
+    |
+    | Configuration for the monthly financial closure module.
+    |
+    */
+
+    'closure' => [
+        'require_approval_for_override' => true,
+        'auto_generate_deep_links' => true,
+        'deep_link_prefix' => env('FINANCEPACK_DEEP_LINK_PREFIX', ''),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Budget Settings
+    |--------------------------------------------------------------------------
+    |
+    | Configuration for the budgeting tool and variance tracking.
+    |
+    */
+
+    'budget' => [
+        'default_growth_rate' => (float) env('FINANCEPACK_BUDGET_GROWTH_RATE', 0.0),
+        'variance_alert_threshold' => (float) env('FINANCEPACK_VARIANCE_ALERT_THRESHOLD', 10.0),
+        'critical_variance_threshold' => (float) env('FINANCEPACK_CRITICAL_VARIANCE_THRESHOLD', 25.0),
+        'currency_code' => env('FINANCEPACK_BUDGET_CURRENCY', 'USD'),
+    ],
+
 ];
