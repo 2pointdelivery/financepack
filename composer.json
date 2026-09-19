@@ -1,0 +1,56 @@
+{
+    "name": "financepack/financepack",
+    "type": "library",
+    "description": "A Laravel package for double-entry accrual accounting with multi-company support, Plaid integration, and comprehensive financial reporting.",
+    "keywords": ["laravel", "accounting", "double-entry", "erp", "finance", "invoicing", "plaid"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FinancePack Contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-bcmath": "*",
+        "ext-intl": "*",
+        "akaunting/laravel-money": "^6.0.2",
+        "laravel/framework": "^11.0|^12.0",
+        "squirephp/model": "^3.4",
+        "squirephp/repository": "^3.4"
+    },
+    "require-dev": {
+        "barryvdh/laravel-snappy": "^1.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "FinancePack\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FinancePack\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FinancePack\\Providers\\FinancePackServiceProvider"
+            ],
+            "aliases": {
+                "FinancePack": "FinancePack\\Facades\\Accounting",
+                "Forex": "FinancePack\\Facades\\Forex"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
